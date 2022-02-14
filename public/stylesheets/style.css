@@ -1,0 +1,97 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*SVGの横幅*/
+.svganimeblock {
+	max-width: 800px;
+	width: 100%;
+}
+
+/*SVGの可変*/
+.svganimeblock svg {
+	width: 100%;
+}
+
+/*アニメーション前のパスの指定*/
+.svganimeblock svg path {
+	fill-opacity: 0;
+	transition: fill-opacity: .5s;
+	fill: none;
+	stroke: #333;
+}
+
+/*アニメーション後のパスの指定*/
+.svganimeblock svg.done path {
+	fill: #666;
+	fill-opacity: 1;
+	stroke: none;
+}
+
+/*ハンバーガーメニュー*/
+.openbtn {
+	position: relative;
+	background: #EC6015;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn .openbtn-area {
+	transition: all .6s;
+	width: 50px;
+	height: 50px;
+}
+
+.openbtn span {
+	display: inline-block;
+	transition: all .4s;
+	position: absolute;
+	left: 14px;
+	height: 3px;
+	border-radius: 2px;
+	background: #fff;
+	width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top: 31px;
+}
+
+.openbtn.active .openbtn-area {
+	transform: rotate(360deg);
+}
+
+.openbtn.active span:nth-of-type(1) {
+	top: 18px;
+	left: 18px;
+	transform: translateY(6px) rotate(-45deg);
+	width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+	top: 30px;
+	left: 18px;
+	transform: translateY(-6px) rotate(45deg);
+	width: 30%;
+}
+

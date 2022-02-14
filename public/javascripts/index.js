@@ -31,3 +31,8 @@ $(window).on('load', function() {
 	VivusInit();
 	VivusAnime();
 });
+
+//ハンバーガーメニュー
+$(".openbtn").click(function() {
+	$(this).toggleClass('active');
+});

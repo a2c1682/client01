@@ -95,3 +95,38 @@ a {
 	width: 30%;
 }
 
+#header {
+	position: relative;
+	height: 100vh;
+}
+
+#video-area {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+#video {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 177.77777778vh;
+	height: 56.25vw;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	color: #fff;
+	text-shadow: 0 0 15px #666;
+}

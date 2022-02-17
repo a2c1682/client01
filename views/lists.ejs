@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+	<meta charset = "UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title><%= title %></title>
+	<link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    	<h1><%= title %></h1>
+
+	<!--ハンバーガーメニュー--!>
+		<div class = "openbtn"><div class = "openbtn-area"><span></span><span></span><span></span></div></div>
+
+	<ul class = "gallery">
+		<li>
+		<a href = "img01.jpg" data-lightbox = "gallery1" data-title = "caption">
+			<img src = "images/img01.jpg" alt = "">
+		</a>
+		</li>
+
+		<li>
+		<a href = "img02.jpg" data-lightbox = "gallery1" data-title = "caption">
+			<img src = "images/img02.jpg" alt = "">
+		</a>
+		</li>
+
+		<li>
+		<a href = "img03.jpg" data-lightbox = "gallery2" data-title = "caption">
+			<img src = "images/img03.jpg" alt = "">
+		</a>
+		</li>
+
+		<li>
+		<a href = "img04.jpg" data-lightbox = "gallery2" data-title = "caption">
+			<img src = "images/img04.jpg" alt = "">
+		</a>
+		</li>
+	</ul>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    	<script type = "text/javascript" src = "/javascripts/index.js"></script>
+  </body>
+</html>

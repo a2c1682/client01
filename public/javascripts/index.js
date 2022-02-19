@@ -67,3 +67,39 @@ $('.scroll-top a').click(function() {
 $(window).scroll(function() {
 	PageTopCheck();
 });
+
+//program menu
+var randomElm = $(".randomScroll");
+var randomElmChild = $(randomElm).children();
+
+function randomScrollAnime() {
+	var elemPos = $(".randomScroll").offset().top-50;
+	var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+
+	if (scroll >= elemPos - windowHeight) {
+		if (randomElmChild.length > 0) {
+			var rnd = Math.floor(Math.random() * randomElmChild.length);
+			var moveData = "fadeUp";
+			if (animeFlag) {
+				animeFlag = false;
+				$(randomElmChild[rnd]).addClass(moveData);
+				setTimeout(function() {
+					animeFlag = true;
+					randomScrollAnime();
+				}, 500);
+				randomElmChild.splite(rnd, 1);
+			}
+		}
+	}
+	else {
+		animeFlag = true;
+	}
+}
+
+
+var animeFlag = true;
+
+$(window).scroll(function() {
+	randomScrollAnime();
+});

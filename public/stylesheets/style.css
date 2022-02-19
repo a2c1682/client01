@@ -217,5 +217,60 @@ _:ms-lang(x), .js-pagetop a::before {
 	right: 0;
 }
 
+/*ブロークングリッドレイアウト*/
+.iodusVisual {
+	display: flex;
+	flex-direction: column-reverse;
+	margin-bottom: 50px;
+}
 
+@media screen and (min-width: 768px) {
+	.iodusVisual__ph {
+		margin-left: 35px;
+	}
+}
 
+.iodusVisual__body {
+	position: relative;
+	z-index: 1;
+	margin-top: -60px;
+	margin-right: 15px;
+	padding: 30px 35px;
+	background: #0027FF;
+	color #fff;
+	font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.iodusVisual__ttl {
+	position: relative;
+	font-size: 48px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.iodusVisual__ttl::after {
+	content: "";
+	display: block;
+	margin: 15px 0 15px -35px;
+	border-top: 1px solid currentColor;
+}
+
+.iodusVisual__txt {
+	line-height: 2;
+}
+
+@media screen and (min-width: 768px) {
+	.iodusVisual__body {
+		margin-top: -114px;
+		margin-right: 0;
+		width: 67.3%;
+	}
+
+	.iodusVisual__ttl {
+		font-size: 48px;
+	}
+
+	.iodusVisual__ttl::after {
+		margin-left: -35px;
+	}
+}

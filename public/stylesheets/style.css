@@ -370,9 +370,9 @@ _:ms-lang(x), .js-pagetop a::before {
 }
 
 .btnarrow:hover::before {
-	left: 20%;
+	left: 40%;
 }
 
 .btnarrow:hover::after {
-	right: -5%;
+	right: -20%;
 }

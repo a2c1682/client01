@@ -70,6 +70,7 @@ a {
 	width: 30%;
 }
 
+<<<<<<< HEAD
 .galley {
 	columns: 4;
 	padding: 0 15px;
@@ -96,4 +97,246 @@ a {
 	.gallery {
 		columns: 2;
 	}
+=======
+#header {
+	position: relative;
+	height: 100vh;
+}
+
+#video-area {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+#video {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 177.77777778vh;
+	height: 56.25vw;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	color: #fff;
+	text-shadow: 0 0 15px #666;
+}
+
+/*スクリールリンクの形状*/
+.scroll-top {
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	z-index: 2;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s, visibility .5s;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	white-space: nowrap;
+	animation: arrowmove 1s ease-in-out infinite;
+}
+
+@keyframes arrowmove {
+	0% {bottom: 20px}
+	50% {bottom: 25px}
+	100% {bottom: 20px}
+}
+
+
+.scroll-top.scroll-view {
+	opacity: 1;
+	visibility: visible;
+}
+
+.scroll-top a {
+	text-decoration: none;
+	color: #666;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	display: block;
+}
+
+.js-scroll a::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 50px;
+	background: #666;
+}
+
+.js-scroll a::before {
+	content: "";
+	position: absolute;
+	top: 30px;
+	right: -6px;
+	width: 1px;
+	height: 20px;
+	background: #666;
+	transform: skewX(-31deg);
+}
+
+_:-ms-lang(x), .js-scroll a::before {
+	right: -11px;
+}
+
+.js-pagetop a::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 50px;
+	background: #666;
+}
+
+.js-pagetop a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -6px;
+	width: 1px;
+	height: 20px;
+	background: #666;
+	transform: skewX(31deg);
+}
+
+_:ms-lang(x), .js-pagetop a::before {
+	right: 0;
+}
+
+/*ブロークングリッドレイアウト*/
+.iodusVisual {
+	display: flex;
+	flex-direction: column-reverse;
+	margin-bottom: 50px;
+}
+
+<<<<<<< HEAD
+@media screen and (min-width: 768px) {
+	.iodusVisual__ph {
+		margin-left: 35px;
+	}
+}
+
+.iodusVisual__body {
+	position: relative;
+	z-index: 1;
+	margin-top: -60px;
+	margin-right: 15px;
+	padding: 30px 35px;
+	background: #0027FF;
+	color #fff;
+	font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.iodusVisual__ttl {
+	position: relative;
+	font-size: 48px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.iodusVisual__ttl::after {
+	content: "";
+	display: block;
+	margin: 15px 0 15px -35px;
+	border-top: 1px solid currentColor;
+}
+
+.iodusVisual__txt {
+	line-height: 2;
+}
+
+@media screen and (min-width: 768px) {
+	.iodusVisual__body {
+		margin-top: -114px;
+		margin-right: 0;
+		width: 67.3%;
+	}
+
+	.iodusVisual__ttl {
+		font-size: 48px;
+	}
+
+	.iodusVisual__ttl::after {
+		margin-left: -35px;
+	}
+=======
+/*アコーディオンパネル*/
+.accordion-area {
+	list-style: none;
+	width: 96%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.accordion-area li {
+	margin: 10px 0;
+}
+
+.accordion-area section {
+	border: 1px solid #ccc;
+}
+
+.title {
+	position: relative;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: normal;
+	padding: 3% 3% 3% 50px;
+	transition: all .5s ease;
+}
+
+.title::before,
+.title::after {
+	position: absolute;
+	content: '';
+	width: 15px;
+	height: 2px;
+	background-color: #333;
+}
+
+.title::before {
+	top: 48%;
+	left: 15px;
+	transform: rotate(0deg);
+}
+
+.title::after {
+	top: 48%;
+	left: 15px;
+	transform: rotate(90deg);
+}
+
+.title.close::before {
+	transform: rotate(45deg);
+}
+
+.title.close::after {
+	transform: rotate(-45deg);
+}
+
+.box {
+	display: none;
+	background: #f3f3f3;
+	margin 0 3% 3% 3%;
+	padding: 3%;
+>>>>>>> origin/qa
+>>>>>>> origin/master
 }

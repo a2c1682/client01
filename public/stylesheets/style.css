@@ -336,3 +336,43 @@ _:ms-lang(x), .js-pagetop a::before {
 	padding: 3%;
 >>>>>>> origin/qa
 }
+
+.btnarrow {
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+	color: #333;
+	text-decoration: none;
+	outline: none;
+}
+
+.btnarrow::before {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 15%;
+	width: 85%;
+	height: 1px;
+	background: #333;
+	transition: all .3s;
+}
+
+.btnarrow::after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	right: 0;
+	width: 15px;
+	height: 1px;
+	background: #333;
+	transform: rotate(35deg);
+	transition: all .3s;
+}
+
+.btnarrow:hover::before {
+	left: 20%;
+}
+
+.btnarrow:hover::after {
+	right: -5%;
+}

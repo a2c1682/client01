@@ -413,4 +413,19 @@ canvas {
 	width: 100%;
 }
 
+/*キャンペーンボックス*/
+.campaign {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	animation: bgchange  20s ease infinite;
+}
 
+@keyframes bgchange {
+	0%  {background: #ffe6e1;}
+	25% {background: #fdcb9e;}
+	50% {background: #fdcbc1;}
+	75% {background: #ffff8c;}
+	90% {background: #b2dffb;}
+	100%{background: #ffe6e1;}
+}

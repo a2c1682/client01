@@ -378,7 +378,7 @@ _:ms-lang(x), .js-pagetop a::before {
 }
 
 /*program menuの動き*/
-.randomBox {
+.delayBox {
 	opacity: 0;
 }
 

@@ -69,37 +69,38 @@ $(window).scroll(function() {
 });
 
 //program menu
-var randomElm = $(".randomScroll");
-var randomElmChild = $(randomElm).children();
+function delayScrollAnime() {
+	var time = 0.2;
+	var value = time;
+	$('.delayScroll').each(function() {
+		var parent = this;
+		var elemPos = $(this).offset().top;
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var childs = $(this).children();
 
-function randomScrollAnime() {
-	var elemPos = $(".randomScroll").offset().top-50;
-	var scroll = $(window).scrollTop();
-	var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {
+			$(childs).each(function() {
+				if (!$(this).hasClass("fadeUp")) {
+					$(parent).addClass("play");
+					$(this).css("animation-delay", value + "s");
+					$(this).addClass("fadeUp");
+					value = value + time;
 
-	if (scroll >= elemPos - windowHeight) {
-		if (randomElmChild.length > 0) {
-			var rnd = Math.floor(Math.random() * randomElmChild.length);
-			var moveData = "fadeUp";
-			if (animeFlag) {
-				animeFlag = false;
-				$(randomElmChild[rnd]).addClass(moveData);
-				setTimeout(function() {
-					animeFlag = true;
-					randomScrollAnime();
-				}, 500);
-				randomElmChild.splite(rnd, 1);
-			}
+					var index = $(childs).index(this);
+					if ((childs.length-1) == index) {
+						$(parent).removeClass("play");
+					}
+				}
+			})
 		}
-	}
-	else {
-		animeFlag = true;
-	}
+		else {
+			$(childs).removeClass("fadeUp");
+			value = time;
+		}
+	})
 }
 
-
-var animeFlag = true;
-
 $(window).scroll(function() {
-	randomScrollAnime();
+	delayScrollAnime();
 });

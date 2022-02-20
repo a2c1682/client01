@@ -399,3 +399,18 @@ _:ms-lang(x), .js-pagetop a::before {
 		transform: translateY(0);
 	}
 }
+
+/*波：コンテンツ区切り*/
+.wave {
+	position: relative;
+	height: 200px;
+}
+
+canvas {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+

@@ -123,6 +123,8 @@ function init() {
 	colorList.push(['#43c0e4']);
 	canvasList.push(document.getElementById("waveCanvas3"));
 	colorList.push(['#666', '#888']);
+	canvasList.push(document.getElementById("waveCanvas4"));
+	colorList.push(['#0ff', '#ff0']);
 
 	for (var canvasIndex in canvasList) {
 		var canvas = canvasList[canvasIndex];
@@ -183,4 +185,7 @@ function drawSine(canvas, t, zoom, delay) {
 }
 
 init();
+
+//背景に桜を散らす
+
 

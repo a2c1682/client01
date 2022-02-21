@@ -8,7 +8,8 @@
     	<link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-	
+	<div id = "particles-js"></div>
+  	<div id = "wrapper">
 	<header id = "header">
 		<h1><%= title %></h1>
 		<div id = "video-area">
@@ -72,6 +73,13 @@
 	<canvas id = "waveCanvas3"></canvas>
 	</div>
 
+
+
+	<!-- 波：コンテンツ区切り4 --!>
+	<div class = "wave">
+	<canvas id = "waveCanvas4"></canvas>
+	</div>
+
 	<!-- footer --!>
 	<footer id = "footer">
 	
@@ -85,10 +93,11 @@
 	<small>&copy; copyright.</small>
 	
 	</footer>
-
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+	<script src = "http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     	<script type = "text/javascript" src = "/javascripts/index.js"></script>
   </body>
 </html>

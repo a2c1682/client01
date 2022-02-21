@@ -1,4 +1,5 @@
 body {
+  height: 100%; //背景に桜を散らす為に追加
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -428,4 +429,20 @@ canvas {
 	75% {background: #ffff8c;}
 	90% {background: #b2dffb;}
 	100%{background: #ffe6e1;}
+}
+
+/*背景に桜を散らす*/
+#particles-js {
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#wrapper {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
 }
